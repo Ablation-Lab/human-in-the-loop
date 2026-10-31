@@ -33,7 +33,16 @@ Observed during the project (anecdotes, not data):
 
 | Date | Caught by | What was caught | Missed by |
 | --- | --- | --- | --- |
-| 31 Oct | Claude Code | Two related-work summaries didn't match their abstracts, and found Anthropic's original auto-approve source | Chat Claude |
+| 31 Oct | Fable 5.1 (independent review) | The council plan couldn't answer its own question: no scoring unit, cost unit or repeats, and several overclaims | Chat Claude, which helped write the plan |
+| 31 Oct | Claude Code | Rigby and Bird (2013)'s abstract doesn't say two reviewers find most defects; swapped for Porter et al. (1997) | Chat Claude and Fable, who both cited it that way |
+| 31 Oct | Chat Claude | A video line said a reviewer is tested against a smarter model checking itself, but the plan had no self-review condition | Claude Code's claims check |
+| 31 Oct | Chat Claude | Claude Code reported the "Beyond Symmetric Agents" preprint couldn't be found; it exists on arXiv | Claude Code (a false "not found") |
+| 31 Oct | Claude Code | Short 1's close sent viewers to a video that didn't yet cover its topic; the opening's "two questions" didn't match three | Chat Claude, who wrote the scripts |
+| 31 Oct | George | Chat Claude's notes said audit Short changes were still to do; most were already done | Chat Claude |
+| 31 Oct | Claude Code | Two related-work summaries didn't match their abstracts, apparently taken from search snippets and news coverage rather than the papers; also found Anthropic's original auto-approve source | Chat Claude, who wrote the summaries |
+| 31 Oct | Claude Code (self-reported) | Its pre-commit privacy check had a broken search pattern, errored and printed "no hits" without checking anything; re-run correctly after the push, nothing private went out | Claude Code, before the push |
+
+Format for future entries: date, who caught it, what, who missed it. Summarise patterns at the end of each project.
 
 ## 4. Setups to compare
 *In plain English: the same small project done four ways, from "the person passes every message" to "the AIs just get on with it".*
@@ -56,6 +65,7 @@ Observed during the project (anecdotes, not data):
 ## 6. Linked experiments
 - How agents talk to each other: two agents build the same app communicating by pasted text, by screenshots or through a shared document. Compare seeded bugs caught, misunderstandings, cost and time.
 - Collusion and oversight: when agents talk directly, check the logs for coordination the human wouldn't approve. This overlaps the council experiment's safeguards.
+- Voice versus text: does the human talking to the AI by voice, rather than typing, change the quality of its work? A first observation (31 Oct 2026, see the catch log): in voice mode, chat Claude kept replies short and avoided long silences, so it ran one search and summarised from snippets, and two summaries turned out wrong. Test: give the same research task by voice and by text, and compare sources actually opened, citation accuracy, seeded errors caught, transcription mistakes and time taken. Links to the council plan's parked accent, dialect and conversational-style study.
 
 ## 7. Safeguards and ethics
 *In plain English: keep the tests safe and fair, and protect the people taking part.*
@@ -96,7 +106,7 @@ Parked review rule: after each experiment, read this list and pick at most one i
 
 | Source | What it says | How it relates |
 | --- | --- | --- |
-| [Mitchell, Ghosh and Passi, "AI Agents Push Humans Out of the Loop" (2026 position paper)](https://arxiv.org/abs/2608.23642) | Current approaches to agent design don't support effective human oversight, and long use of AI erodes the skills oversight depends on. | Supports H2 and H3. Closest match to this project. |
+| [Mitchell, Ghosh and Passi, "AI Agents Push Humans Out of the Loop" (2026 position paper)](https://arxiv.org/abs/2608.23642) | Current approaches to agent design don't support effective human oversight, and long use of AI erodes the skills oversight depends on. | Supports H2. Closest match to this project. |
 | Agudo et al., cited in [a 2026 systematic review of human-in-the-loop AI](https://www.mdpi.com/1099-4300/28/4/377) | People often fail to catch AI mistakes even when they have the knowledge to do so. | Challenges H1: being in the loop doesn't guarantee catching errors. Find and read the original studies. **Unverified:** the review exists (Lazaros, Vrahatis and Kotsiantis, Entropy, 2026), but access was blocked, so the Agudo citation isn't confirmed. |
 | Anthropic, ["Measuring AI agent autonomy in practice"](https://www.anthropic.com/research/measuring-agent-autonomy) (18 Feb 2026), first seen via [NeuralTrust](https://neuraltrust.ai/blog/human-in-the-loop-ai-agents) | Auto-approve use rises from about 20% of sessions for new users to over 40% after around 750 sessions, so oversight drifts from checking each step to monitoring. | Supports H4. |
 | [Zhu, Lu, Ding, Lee and Wang, "Designing meaningful human oversight in AI" (AI and Ethics, May 2026)](https://link.springer.com/article/10.1007/s43681-026-01147-7) | Proposes a layered agency framework to stop human oversight becoming a rubber stamp. | Relevant to the checkpoint setup: how to design oversight that isn't just rubber-stamping. |

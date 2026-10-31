@@ -14,6 +14,10 @@ Planning. Nothing has been tested yet. The full plan, with the hypotheses, the s
 - YouTube: [@AblationLab](https://www.youtube.com/@AblationLab)
 - Related repo: [Ablation-Lab/evolving-review-councils](https://github.com/Ablation-Lab/evolving-review-councils)
 
+## Before committing
+
+A privacy check runs before every commit and blocks it if anything matches or the check itself fails. Enable it once per clone with `git config core.hooksPath .githooks`. Its private pattern list is kept outside the repo; see [scripts/privacy-check.sh](scripts/privacy-check.sh).
+
 ## Licence
 
 Docs are licensed under [CC BY 4.0](LICENSE). Any future code will be MIT, copyright "Ablation Lab (geodnb)".
