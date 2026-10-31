@@ -16,7 +16,7 @@ Planning. Nothing has been tested yet. The full plan, with the hypotheses, the s
 
 ## Before committing
 
-A privacy check runs before every commit and blocks it if anything matches or the check itself fails. Enable it once per clone with `git config core.hooksPath .githooks`. Its private pattern list is kept outside the repo; see [scripts/privacy-check.sh](scripts/privacy-check.sh).
+A privacy check runs before every commit and blocks it if anything matches or the check itself fails. Enable it once per clone with `git config core.hooksPath .githooks`. Its private search terms go in `.privacy/patterns.txt`, which must be git-ignored (add `.privacy/.gitignore` containing `*`) and is never committed; see [scripts/privacy-check.sh](scripts/privacy-check.sh).
 
 ## Licence
 
