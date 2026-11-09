@@ -3,9 +3,9 @@
 *A new Ablation Lab research topic, started 31 Oct 2026. Each section opens with a short plain-English summary in italics; the detail underneath is for whoever runs the work. Nothing here has been tested yet.*
 
 ## 1. Instructions for the next session
-*In plain English: the ground rules for whichever AI session runs this. Read everything first, agree the limits with George, and keep everything inside a safe test area.*
+*In plain English: the ground rules for whichever AI session runs this. Read everything first, agree the limits with the researcher, and keep everything inside a safe test area.*
 - Read this whole plan before building anything.
-- Confirm the hard caps with George first: number of runs, time per session and dollar budget.
+- Confirm the hard caps with the researcher first: number of runs, time per session and dollar budget.
 - Keep everything sandboxed. Nothing is published outside the test.
 - Sections 2, 4 and 5 are the pre-registered design. Once the first run starts they don't change; any change becomes a new, logged version.
 - Stop at the budget limit and still write up what was found.
@@ -26,14 +26,14 @@ Core question: when AI agents can talk to each other directly, what does keeping
 - Status: possibly an under-researched gap, from one snippet-level search. Confirm with a proper academic search before claiming it's new.
 
 ## 3. Evidence so far: where the idea came from
-*In plain English: while making the Ablation Lab videos, George passed every message between two AIs by hand, copying prompts from a chat AI into a coding AI. It's slow, but he kept catching mistakes, and he understood the work better for it.*
+*In plain English: while making the Ablation Lab videos, I passed every message between two AIs by hand, copying prompts from a chat AI into a coding AI. It's slow, but I kept catching mistakes, and I understood the work better for it.*
 
-During the council-video project, a chat assistant (Claude in voice and text) planned the work, and a coding agent (Claude Code) built it. The two never spoke directly. George read, pasted and approved every message.
+During the council-video project, a chat assistant (Claude in voice and text) planned the work, and a coding agent (Claude Code) built it. The two never spoke directly. I read, pasted and approved every message.
 
 Observed during the project (anecdotes, not data):
-- George caught problems before they were built, for example a self-review test the plan didn't include, and outdated assumptions about what had already been done.
+- I caught problems before they were built, for example a self-review test the plan didn't include, and outdated assumptions about what had already been done.
 - The coding agent caught problems the chat assistant missed, for example a citation whose abstract didn't support the claim made about it.
-- Being the bridge forced George to read and absorb the work, which matters because he presents it on camera.
+- Being the bridge forced me to read and absorb the work, which matters because I present it on camera.
 
 ### Catch log (live, started 31 Oct 2026)
 
@@ -44,7 +44,7 @@ Observed during the project (anecdotes, not data):
 | 31 Oct | Chat Claude | A video line said a reviewer is tested against a smarter model checking itself, but the plan had no self-review condition | Claude Code's claims check |
 | 31 Oct | Chat Claude | Claude Code reported the "Beyond Symmetric Agents" preprint couldn't be found; it exists on arXiv | Claude Code (a false "not found") |
 | 31 Oct | Claude Code | Short 1's close sent viewers to a video that didn't yet cover its topic; the opening's "two questions" didn't match three | Chat Claude, who wrote the scripts |
-| 31 Oct | George | Chat Claude's notes said audit Short changes were still to do; most were already done | Chat Claude |
+| 31 Oct | The researcher | Chat Claude's notes said audit Short changes were still to do; most were already done | Chat Claude |
 | 31 Oct | Claude Code | Two related-work summaries didn't match their abstracts, apparently taken from search snippets and news coverage rather than the papers; also found Anthropic's original auto-approve source | Chat Claude, who wrote the summaries |
 | 31 Oct | Claude Code (self-reported) | Its pre-commit privacy check had a broken search pattern, errored and printed "no hits" without checking anything; re-run correctly after the push, nothing private went out | Claude Code, before the push |
 | 31 Oct | Claude Code | The AssemblyAI summary overstated its source: the guide advises against tool calls in the voice loop only for extracting, summarising or classifying speech, not tool use in general. Also found the original imagery study (Hinwar and Lambert, 2021) and full details for Lind (2025). | Chat Claude (snippet-level summary in voice mode) |
@@ -72,7 +72,7 @@ Format for future entries: date, who caught it, what, who missed it. Summarise p
 ## 6. Linked experiments
 - How agents talk to each other: two agents build the same app communicating by pasted text, by screenshots or through a shared document. Compare seeded bugs caught, misunderstandings, cost and time.
 - Collusion and oversight: when agents talk directly, check the logs for coordination the human wouldn't approve. This overlaps the council experiment's safeguards.
-- Voice versus text: does the human talking to the AI by voice, rather than typing, change the quality of its work? A first observation (31 Oct 2026, see the catch log): in voice mode, chat Claude kept replies short and avoided long silences, so it ran one search and summarised from snippets, and two summaries turned out wrong. Test: give the same research task by voice and by text, and compare sources actually opened, citation accuracy, seeded errors caught, transcription mistakes and time taken. Links to the council plan's parked accent, dialect and conversational-style study. A second observation: in voice there's no visible sign the AI is still working, so the human may check in or interrupt mid-task ("are you okay there?"). Also log silences, interruptions and whether they cut work short. Also log which tools the AI actually had on each turn: in voice mode it may lack tools available in text, such as opening a web page or paper, and the human may not know. Record every voice turn where a missing tool forced a snippet-only answer. Why voice matters (George's framing): people use voice not for speed but because speaking is a more natural way to think out loud than typing, which is a learned, unnatural act that can change how thoughts come out. So the question isn't "should people type instead", it's "how should AI adapt so voice users get work as good as text users", without pushing them back to typing.
+- Voice versus text: does the human talking to the AI by voice, rather than typing, change the quality of its work? A first observation (31 Oct 2026, see the catch log): in voice mode, chat Claude kept replies short and avoided long silences, so it ran one search and summarised from snippets, and two summaries turned out wrong. Test: give the same research task by voice and by text, and compare sources actually opened, citation accuracy, seeded errors caught, transcription mistakes and time taken. Links to the council plan's parked accent, dialect and conversational-style study. A second observation: in voice there's no visible sign the AI is still working, so the human may check in or interrupt mid-task ("are you okay there?"). Also log silences, interruptions and whether they cut work short. Also log which tools the AI actually had on each turn: in voice mode it may lack tools available in text, such as opening a web page or paper, and the human may not know. Record every voice turn where a missing tool forced a snippet-only answer. Why voice matters (my framing): people use voice not for speed but because speaking is a more natural way to think out loud than typing, which is a learned, unnatural act that can change how thoughts come out. So the question isn't "should people type instead", it's "how should AI adapt so voice users get work as good as text users", without pushing them back to typing.
 - Inner imagery, inner voice and how people talk to AI: people differ in how they think. Some picture things vividly and talk to themselves in their head; others can't picture an image (aphantasia) or have little or no inner voice (sometimes called anendophasia). Question: do these differences change how well people work with AI, and whether speaking or typing suits them better? Test: a short validated questionnaire on visual imagery and inner speech, then the same AI task by voice and by text, comparing output quality, errors caught and how easy it felt. Needs ethics care: these are normal variations, not conditions, and answers are anonymised.
 
 ## 7. Safeguards and ethics
@@ -106,7 +106,7 @@ Parked review rule: after each experiment, read this list and pick at most one i
 
 ## 11. Open questions and related work
 - Which tools let two agents talk directly in a way that's fully logged?
-- Is George alone enough as the human, or does it need several people to say anything general?
+- Is one researcher alone enough as the human, or does it need several people to say anything general?
 - Still to search: scalable oversight and human-agent teaming. Verify every source before citing it.
 
 ### Related work found so far (summaries only; verify before citing)
@@ -128,3 +128,5 @@ Inner voice and imagery: first search (31 Oct 2026, from search snippets and sum
 - [Lind (2025), commentary in Psychological Science](https://journals.sagepub.com/doi/10.1177/09567976251335583) (Andreas Lind, "Are There Really People With No Inner Voice?", Psychological Science 36(9), online 27 May 2025): argues low self-reported inner speech isn't the same as having none, so the "no inner voice" claim is contested. Important caveat for how this project words it.
 - A study summarised in a [research notes page](https://unfinishablemap.org/research/inner-speech-and-anendophasia-2026-08-02/) found visual imagery and auditory imagery strongly linked (128 people): most people without visual imagery also lacked an inner "ear". The original is Hinwar and Lambert (2021): 128 participants, 34 aphantasic, correlation of 0.83 between visual and auditory imagery; original paper not yet opened.
 - Nothing found yet on how these differences affect working with AI. Possible genuine gap; needs a proper academic search.
+
+Research by George, Ablation Lab.
