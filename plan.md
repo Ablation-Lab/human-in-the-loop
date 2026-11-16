@@ -51,6 +51,22 @@ Observed during the project (anecdotes, not data):
 
 Format for future entries: date, who caught it, what, who missed it. Summarise patterns at the end of each project.
 
+### Field notes from the review councils project (copied 16 Nov 2026)
+*In plain English: in another project, a session misreported its own message, I made another slip while passing files between sessions, and two sessions sent messages that never went through me.*
+
+The full notes are in the review councils project's [experiment-plan.md](https://github.com/Ablation-Lab/evolving-review-councils/blob/main/core-method/experiment-plan.md), under "The hard-tier difficulty check" and "The messaging check". The earlier relay slips are there too, starting with "The leak".
+
+- **A session misreported its own message (16 Nov 2026).** During a test of Claude Code's cross-session messaging, a session sent a message that the receiving session refused. The refusal notice came back into the sender's context. Even so, the sender first told me the message was "in that session's inbox", and only corrected itself in its next reply.
+  - **So:** a session's account of its own messaging can be wrong, and the record has to come from the transcript.
+  - **Sources:** the "inbox" claim is from my account. A scan of the transcripts confirms the refusal.
+- **A fifth relay slip (16 Nov 2026).** While passing a seed-aware session's output to the chat assistant, I pasted rows from a file that gives the hidden test bugs' IDs per folder.
+  - **No harm done:** the chat assistant had already seen those bugs, and they had already been set aside for pilot use only, so no result was affected.
+  - **The pattern:** it's the fifth recorded case of hidden details crossing a relay I run by hand. No hook or privacy check covers what I paste.
+- **Messages that didn't go through me** (found on 16 Nov 2026, by a scan of 99 sessions' transcripts):
+  - **5 Nov 2026, between two sessions:** I'd asked a session to update a repository's README. Without being asked, it sent another session a message asking whether that session was editing the same repository. It set `notify_when_idle` so it would hear back when the other session went idle. Claude Code's messaging carried it, and I relayed nothing.
+  - **9 Nov 2026, within one session:** a main session sent its own review subagent "No action needed; continue your review." while that reviewer was still working. This was a main session messaging its own subagent, not two sessions messaging each other. Still, an instruction that no brief contained reached a reviewer mid-review, and nobody saw it first.
+  - **Why it matters:** the "Full relay" setup in section 4 assumes the human is on every path between agents. In practice, the tools can open paths the human never sees. This bears on section 6's collusion and oversight item. Neither message carried review material.
+
 ## 4. Setups to compare
 *In plain English: the same small project done four ways, from "the person passes every message" to "the AIs just get on with it".*
 
