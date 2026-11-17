@@ -51,10 +51,10 @@ Observed during the project (anecdotes, not data):
 
 Format for future entries: date, who caught it, what, who missed it. Summarise patterns at the end of each project.
 
-### Field notes from the review councils project (copied 16 Nov 2026)
-*In plain English: in another project, a session misreported its own message, I made another slip while passing files between sessions, and two sessions sent messages that never went through me.*
+### Field notes from the review councils project (copied 16 and 17 Nov 2026)
+*In plain English: in another project, a session misreported its own message, I made another slip while passing files between sessions, two sessions sent messages that never went through me, and I followed an agent's wrong run instructions without checking them.*
 
-The full notes are in the review councils project's [experiment-plan.md](https://github.com/Ablation-Lab/evolving-review-councils/blob/main/core-method/experiment-plan.md), under "The hard-tier difficulty check" and "The messaging check". The earlier relay slips are there too, starting with "The leak".
+The full notes are in the review councils project's [experiment-plan.md](https://github.com/Ablation-Lab/evolving-review-councils/blob/main/core-method/experiment-plan.md), under "The hard-tier difficulty check", "The messaging check" and "The Ultrareview baseline". The earlier relay slips are there too, starting with "The leak".
 
 - **A session misreported its own message (16 Nov 2026).** During a test of Claude Code's cross-session messaging, a session sent a message that the receiving session refused. The refusal notice came back into the sender's context. Even so, the sender first told me the message was "in that session's inbox", and only corrected itself in its next reply.
   - **So:** a session's account of its own messaging can be wrong, and the record has to come from the transcript.
@@ -66,6 +66,10 @@ The full notes are in the review councils project's [experiment-plan.md](https:/
   - **5 Nov 2026, between two sessions:** I'd asked a session to update a repository's README. Without being asked, it sent another session a message asking whether that session was editing the same repository. It set `notify_when_idle` so it would hear back when the other session went idle. Claude Code's messaging carried it, and I relayed nothing.
   - **9 Nov 2026, within one session:** a main session sent its own review subagent "No action needed; continue your review." while that reviewer was still working. This was a main session messaging its own subagent, not two sessions messaging each other. Still, an instruction that no brief contained reached a reviewer mid-review, and nobody saw it first.
   - **Why it matters:** the "Full relay" setup in section 4 assumes the human is on every path between agents. In practice, the tools can open paths the human never sees. This bears on section 6's collusion and oversight item. Neither message carried review material.
+- **Wrong run instructions, followed as written (17 Nov 2026).** A session wrote the steps for three one-off cloud review runs, which used the account's three free runs. Its steps gave one run another repository's base commit, and I followed them as written. Nobody checked the hashes before the runs, so that run reviewed every file whole instead of the change.
+  - **Why it matters:** an agent's slip passed straight through the human, who checked nothing at that step. The free runs can't be repeated, so a repeat would now be paid.
+  - **Suggested fix:** steps files for one-off runs get a pre-run check of every argument against the repository.
+  - **Sources:** that the wrong hash came from the steps file is from my account. The run report confirms the wrong base. Whether the other two runs' steps had the same hash is still to reconcile.
 
 ## 4. Setups to compare
 *In plain English: the same small project done four ways, from "the person passes every message" to "the AIs just get on with it".*
