@@ -76,6 +76,15 @@ The full notes are in the review councils project's [experiment-plan.md](https:/
   - **Sources:** the steps file and the launch lines are from my account. The run report confirms the wrong base for run 2 only.
 - **Recollection against record (17 Nov 2026).** Afterwards, I recalled using the wrong commit for all three runs. The saved launch lines show run 3 was right. My memory and the record disagreed, and the record was right.
   - **So:** like the session that misreported its own message above, accounts of what happened, human or agent, are checked against the record: transcripts where there are any, and saved commands and outputs where there aren't.
+- **A placeholder typed in (17 Nov 2026).** For the paid rerun, the chat assistant wrote the command with a placeholder in angle brackets for the commit. I typed the brackets in, and the command failed ("not a branch or commit in this repo").
+  - **The family:** it's the same kind of slip as the "repeat for each" block above. AI-written instructions left a substitution to the person running them.
+  - **Fix:** AI-written commands for one-off runs are given in full, with real values, never placeholders.
+  - **Failing was the lucky case:** by the review tool's docs, the slash-command form keeps text of more than one word as a note and still launches the review, on the default scope. So a placeholder there could have started a paid run on the wrong scope.
+  - **Sources:** the command and the error are from my account.
+- **A silent failure (17 Nov 2026).** The first rerun attempt, with its output redirected to a file, exited with code 1 and showed nothing on screen. I found it only by checking the exit code. The likely causes were signing in with a VPN on, and usage credits being off.
+  - **Fix:** run one-off paid steps interactively, so prompts and errors are visible.
+  - **Why it matters:** redirecting output hid the failure from the human, who had to know to check the exit code. The tool's docs also say that when it can't ask, for example "with output sent to a file", an untrusted folder makes it exit too. So redirecting can cause a failure as well as hide one.
+  - **Sources:** the attempt, the exit code and the likely causes are from my account. The redirected file may hold the error message.
 
 ## 4. Setups to compare
 *In plain English: the same small project done four ways, from "the person passes every message" to "the AIs just get on with it".*
