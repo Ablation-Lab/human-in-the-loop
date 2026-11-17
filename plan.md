@@ -74,6 +74,7 @@ The full notes are in the review councils project's [experiment-plan.md](https:/
   - **Fix:** for one-off runs, write each command out in full with its own values, and check every argument against the repository before running.
   - **Why it matters:** a template that leaves the human to swap in values by hand is a step where a tired relay slips.
   - **Sources:** the steps file and the launch lines are from my account. The run report confirms the wrong base for run 2 only.
+    - (amended 17 Nov 2026: the run report now covers both. It puts the cause on the steps file's design, which the session wrote: its ready-to-paste command named the first repository's commit, and only a sentence of prose said to swap it. So both played a part. The file's command was wrong for runs 2 and 3, and I swapped it for run 3 but not run 2.)
 - **Recollection against record (17 Nov 2026).** Afterwards, I recalled using the wrong commit for all three runs. The saved launch lines show run 3 was right. My memory and the record disagreed, and the record was right.
   - **So:** like the session that misreported its own message above, accounts of what happened, human or agent, are checked against the record: transcripts where there are any, and saved commands and outputs where there aren't.
 - **A placeholder typed in (17 Nov 2026).** For the paid rerun, the chat assistant wrote the command with a placeholder in angle brackets for the commit. I typed the brackets in, and the command failed ("not a branch or commit in this repo").
@@ -85,6 +86,10 @@ The full notes are in the review councils project's [experiment-plan.md](https:/
   - **Fix:** run one-off paid steps interactively, so prompts and errors are visible.
   - **Why it matters:** redirecting output hid the failure from the human, who had to know to check the exit code. The tool's docs also say that when it can't ask, for example "with output sent to a file", an untrusted folder makes it exit too. So redirecting can cause a failure as well as hide one.
   - **Sources:** the attempt, the exit code and the likely causes are from my account. The redirected file may hold the error message.
+    - (amended 17 Nov 2026: the run report settles it. The attempt stopped before launching because the free runs were used up and usage credits weren't on, so nothing ran and nothing was billed. It doesn't mention a VPN.)
+- **A conflict caught and handed back (17 Nov 2026).** The chat assistant gave two conflicting instructions about the run plan: first to amend it so the rerun would replace the wrong-scope run, then to withdraw that amendment. The seed folder's session caught the conflict and asked me, instead of choosing.
+  - **Why it matters:** in the slips above, a substitution was left to the human. Here a session handed back a choice that was the human's to make, so the relay worked as a check.
+  - **Sources:** this is from my account. The run report fits it: it keeps the original figures "as asked", and says which reading is the headline "is the researcher's decision".
 
 ## 4. Setups to compare
 *In plain English: the same small project done four ways, from "the person passes every message" to "the AIs just get on with it".*
