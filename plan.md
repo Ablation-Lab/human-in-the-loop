@@ -91,6 +91,17 @@ The full notes are in the review councils project's [experiment-plan.md](https:/
   - **Why it matters:** in the slips above, a substitution was left to the human. Here a session handed back a choice that was the human's to make, so the relay worked as a check.
   - **Sources:** this is from my account. The run report fits it: it keeps the original figures "as asked", and says which reading is the headline "is the researcher's decision".
 
+### Field note from other work (18 Nov 2026)
+*In plain English: I pasted passwords into an AI session by mistake, nothing noticed, and a later check of old session records found it.*
+
+- **A secret pasted into a session (15 Nov 2026, found 17 Nov 2026).** While working on an app, I pasted the passwords for its signing key into a Claude Code session by mistake. Nothing flagged it at the time: not the session and not me.
+  - **How it was found:** two days later, an overnight loose-ends check that read old session transcripts found it.
+  - **The response:** the key is being replaced. It had only signed internal test builds.
+  - **Lesson 1: a transcript keeps whatever is pasted into it** for as long as transcripts are kept. Here that's 365 days, by the `cleanupPeriodDays` setting in my Claude Code user settings.
+  - **Lesson 2: enter secrets only outside Claude,** never typed or pasted into a session.
+  - **The pattern:** like the relay slips above, it's something I pasted that no hook or privacy check covers. The privacy check scans what's committed, not what's pasted into a session.
+  - **Sources:** the paste, the check and the key's use are from my account. The 365 days is from the settings file. No password or file path is recorded here.
+
 ## 4. Setups to compare
 *In plain English: the same small project done four ways, from "the person passes every message" to "the AIs just get on with it".*
 
