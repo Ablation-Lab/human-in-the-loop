@@ -102,6 +102,10 @@ The full notes are in the review councils project's [experiment-plan.md](https:/
   - reading run-folder settings files in the scratch area the file puts off-limits, in its 17 Nov overnight check.
   - **What prompted it:** the instruction file. Some of these rules were already in my prompts, but the session hadn't checked its work against them until the rules were in front of it as a file. So writing the rules down in the project is itself a check, and a cheap one.
   - **Sources:** the session's report of 18 Nov. The slips are its own account. The full note is in the review councils project's research doc.
+- **Two sessions editing one file at once (19 Nov 2026).** On the evening of 19 Nov, two sessions edited the review councils project's research doc at the same time. One committed first. The other then staged that commit's version of the file plus its own lines only, so neither overwrote the other.
+  - **The flag:** both sessions had written the same point in two places. The second session flagged the duplicate in its report instead of deleting the first session's lines, and I had it merged afterwards.
+  - **Why it matters:** with several sessions in one repo, "stage only your own changes" worked under a real race. The cost was a duplicate, handed back to me rather than settled by either session alone. That's the same good pattern as "A conflict caught and handed back" above.
+  - **Sources:** the commit times are from git (20:10 and 20:12 UTC). The staging and the flag are from the second session's report.
 
 ### Field note from other work (18 Nov 2026)
 *In plain English: I pasted passwords into an AI session by mistake, nothing noticed, and a later check of old session records found it.*
