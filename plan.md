@@ -94,6 +94,14 @@ The full notes are in the review councils project's [experiment-plan.md](https:/
   - **The family:** like the template block and the placeholder above, it's a hand-run step where something was assumed and not checked, here the folder and the shell. The steps text quoted in that session still gave the PowerShell check for a cmd window.
   - **Fix:** one-off commands are written for the exact shell and folder they run in, and the folder is checked before launching.
   - **Sources:** the overnight audit of 17 Nov found it in another session's transcript. Claude Code confirmed the error and the time (23:48:15) there on 19 Nov. The rest is from my account.
+- **AI-written instructions going wrong, again (noted 19 Nov 2026).** The failed launch's PowerShell-in-cmd syntax came from the AI-written steps, not from me. It's the third case in these notes, after the "repeat for each" block and the placeholder. In each, an AI wrote a one-off command that was wrong for where it would run, and I ran it as written.
+  - **The pattern:** I'm the last check on AI-written commands, and in these three cases I didn't check them. The fixes so far all move the check back to the writer: commands written out in full, with real values, for the exact shell and folder.
+- **Rule slips self-reported once an instruction file was in view (18–19 Nov 2026).** The research repo gained a project `CLAUDE.md` on 18 Nov. When the notes session met it, it checked its own recent work against the file and reported three slips of its own, unprompted:
+  - a search across my whole projects folder that read every file in the seed folder, though only one file name, a seed-free report's, entered its context;
+  - pushing two other sessions' commits without asking me first;
+  - reading run-folder settings files in the scratch area the file puts off-limits, in its 17 Nov overnight check.
+  - **What prompted it:** the instruction file. Some of these rules were already in my prompts, but the session hadn't checked its work against them until the rules were in front of it as a file. So writing the rules down in the project is itself a check, and a cheap one.
+  - **Sources:** the session's report of 18 Nov. The slips are its own account. The full note is in the review councils project's research doc.
 
 ### Field note from other work (18 Nov 2026)
 *In plain English: I pasted passwords into an AI session by mistake, nothing noticed, and a later check of old session records found it.*
