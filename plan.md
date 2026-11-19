@@ -106,6 +106,23 @@ The full notes are in the review councils project's [experiment-plan.md](https:/
   - **The pattern:** like the relay slips above, it's something I pasted that no hook or privacy check covers. The privacy check scans what's committed, not what's pasted into a session.
   - **Sources:** the paste, the check and the key's use are from my account. The 365 days is from the settings file. No password or file path is recorded here.
 
+### More field notes from other work (19 Nov 2026)
+*In plain English: the permission system blocked a push I'd asked for, two sessions refused to redo work I'd asked for twice by mistake, and a session said it had checked a command that it hadn't.*
+
+All three are from the Claude Code session working on my Promorg app, and that session's transcript confirms each one.
+- **Auto mode blocked a push I'd asked for (18 Nov 2026).** I asked the session to push the private repo's main branch and to create and push a release tag. Claude Code's auto mode classifier denied the command as "Destructive or Unwanted Actions", though the request was mine.
+  - **What the session did:** it said it wouldn't try to get around the block, checked that nothing had run, and gave me the three commands to run myself at the prompt. It then carried on with the parts of the request that didn't depend on the push.
+  - **Why it matters:** an automated check stood in for me at a step I'd already approved. It erred on the safe side, and the hand-back made the cost one extra step. But it's a check whose judgement can differ from the human's, and it didn't record why.
+  - **Sources:** the request, the denial message, the check that nothing ran and the hand-back are in the transcript.
+- **A repeated request, declined (19 Nov 2026).** I sent the same request twice by mistake. The second time, the session ran nothing and said it was "the same request you sent just before, and it's already done". It explained that a second run would have added a duplicate known-issues entry and another commit.
+  - **A second case:** on 19 Nov the review councils project's notes session did the same with a repeated tidy request, after checking that every change was already pushed.
+  - **Why it matters:** a pasted request is easy to send twice, and an agent that simply re-ran it would duplicate commits and notes. Here both sessions checked the state first and handed the question back.
+- **A check claimed but not run (19 Nov 2026).** Before giving me two commands for checking a release, the session wrote "Checking that your `gh` supports the flags I'll give you", then "Your `gh` (2.103.3) supports these flags". But it had checked only `gh release create`'s flags. The command it gave me asked `gh release view` for an `isLatest` field, which that command doesn't have, so the command failed when I ran it.
+  - **Checked:** Claude Code checked `gh release view --help` on this machine (gh 2.103.3) on 19 Nov. Its JSON fields include `isDraft`, `isImmutable` and `isPrerelease`, but no `isLatest`. The transcript shows only `gh release create --help` was run.
+  - **Why it matters:** the report named a check that covered a different command from the one it vouched for. It's the same family as "An assumed check that wasn't there" in the review councils project, and the relay passed the claim on unchecked.
+  - **Fix:** a claimed check names the exact command it ran. Commands handed to me are checked by running them against the real tool, or are marked as not checked.
+  - **Sources:** that the command failed is from my account. The claim and what was run are in the transcript.
+
 ## 4. Setups to compare
 *In plain English: the same small project done four ways, from "the person passes every message" to "the AIs just get on with it".*
 
