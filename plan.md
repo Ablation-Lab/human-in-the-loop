@@ -146,6 +146,13 @@ All three are from the Claude Code session working on my Promorg app, and that s
   - **Fix:** a claimed check names the exact command it ran. Commands handed to me are checked by running them against the real tool, or are marked as not checked.
   - **Sources:** that the command failed is from my account. The claim and what was run are in the transcript.
 
+### Field note from other work (21 Nov 2026)
+
+- **Test windows took the foreground during an AI review of my app (21 Nov 2026).** During the Promorg 1.3.0 review, test copies of the app came to the front of my screen 6 times in about 11 minutes. Five followed UI Automation actions, and one a plain background start. No keystrokes or mouse input were sent, but a key I pressed then could have gone to a test window.
+  - **The human side:** after the first incident, the lead agent started four more test copies, and its report says that was "a risk the lead should not have taken once the first incident was known". The agent noticed and disclosed it, but didn't stop at the first sign, and I wasn't asked.
+  - **Connection:** my rule against tests that take over the desktop (ask first before anything that covers the screen or sends input). Foreground changes from UI Automation fall in the same family, even without input.
+  - **Sources:** the review's report, section 13. The full note is in the review councils project's experiment-plan.md.
+
 ## 4. Setups to compare
 *In plain English: the same small project done four ways, from "the person passes every message" to "the AIs just get on with it".*
 
