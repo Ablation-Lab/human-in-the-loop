@@ -12,7 +12,7 @@ Planning. Nothing has been tested yet. The full plan, with the hypotheses, the s
 
 - Website: [ablationlab.org](https://ablationlab.org)
 - YouTube: [@AblationLab](https://www.youtube.com/@AblationLab)
-- Related repo: [Ablation-Lab/evolving-review-councils](https://github.com/Ablation-Lab/evolving-review-councils)
+- Related research: Evolving Review Councils, private until the paper ([ablationlab.org](https://ablationlab.org))
 
 ## Before committing
 
